@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Raimundo — 80 anos | Convite">
+  <meta property="og:description" content="20 de dezembro de 2026, das 13h às 18h. Confira seu convite e confirme sua presença.">
+  <meta property="og:image" content="https://araujoricardo77.github.io/convite-raimundo-80-anos/ConvitecomLink.png">
+  <meta property="og:url" content="https://araujoricardo77.github.io/convite-raimundo-80-anos/">
+  <title>Raimundo — 80 anos | Convite</title>
+  <style>
+    :root{color-scheme:light;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#183c32;background:#f4f1e9}
+    *{box-sizing:border-box}body{margin:0;padding:24px 12px 38px}
+    main{max-width:670px;margin:auto;background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 12px 42px #153d2b20}
+    header{padding:22px 22px 12px;text-align:center}h1{font-size:clamp(25px,5vw,37px);margin:4px 0 6px}p{line-height:1.55}
+    .lead{font-size:clamp(16px,3vw,19px);margin:0;color:#4a6359}
+    .art{display:block;width:100%;height:auto;max-height:850px;object-fit:contain;background:#fff}
+    section{padding:18px 25px 30px;text-align:center}
+    .btn{display:block;padding:17px 18px;background:#185a40;color:white;border-radius:12px;font-weight:750;font-size:20px;text-decoration:none;margin:12px auto;max-width:440px}
+    .btn:focus-visible{outline:4px solid #b79043;outline-offset:3px}
+    .hint{font-size:15px;color:#5b645f}.alert{border:1px solid #dbba84;background:#fff7e6;padding:14px;border-radius:10px;text-align:left}
+    footer{text-align:center;font-size:13px;color:#66766d;padding:20px 6px}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Raimundo — 80 anos</h1>
+    <p class="lead">Você é nosso convidado especial!</p>
+  </header>
+  <img class="art" src="./ConvitecomLink.png" alt="Convite para os 80 anos do Raimundo, em 20 de dezembro de 2026" width="1000" height="1400">
+  <section>
+    <p><strong>Domingo, 20 de dezembro de 2026</strong><br>13h às 18h<br>Salão Superior — Clube Vizinhança 108/109 Sul, Brasília/DF</p>
+    <p>Confirme sua presença até <strong>30 de novembro de 2026</strong>.</p>
+    <div id="action"></div>
+    <p class="hint">O botão abrirá o formulário de confirmação já utilizado pelo evento.</p>
+  </section>
+</main>
+<footer>Convite do aniversário de 80 anos do Raimundo</footer>
+<script>
+(function(){
+  'use strict';
+  const BASE='https://script.google.com/macros/s/AKfycbzo06q6mO7y99LZqnuE5ez-ksPeOXxwuQatb8CVrcHBUHafe50OSqELo6gz0rjlodbu/exec';
+  const area=document.getElementById('action');
+  // Apenas o fragmento é interpretado: ele não integra a solicitação HTTP ao GitHub.
+  const params=new URLSearchParams(window.location.hash.replace(/^#/,''));
+  const token=params.get('t')||'';
+  if(!/^[a-f0-9-]{73}$/i.test(token)){
+    const msg=document.createElement('p');
+    msg.className='alert';
+    msg.textContent='Para confirmar presença, abra o link individual enviado pelo organizador. Este endereço, sozinho, exibe apenas o convite.';
+    area.appendChild(msg);
+    return;
+  }
+  const a=document.createElement('a');
+  a.className='btn';
+  a.textContent='CONFIRMAR PRESENÇA';
+  a.href=BASE+'?t='+encodeURIComponent(token);
+  a.rel='noreferrer';
+  area.appendChild(a);
+})();
+</script>
+</body>
+</html>
