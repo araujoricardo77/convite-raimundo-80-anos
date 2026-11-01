@@ -6,11 +6,11 @@
   <meta name="referrer" content="no-referrer">
   <meta name="robots" content="noindex, nofollow">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Raimundo — 80 anos | Convite">
-  <meta property="og:description" content="20 de dezembro de 2026, das 13h às 18h. Confira seu convite e confirme sua presença.">
+  <meta property="og:title" content="Raimundo &#8212; 80 anos | Convite">
+  <meta property="og:description" content="20 de dezembro de 2026, das 13h &#224;s 18h. Confira seu convite e confirme sua presen&#231;a.">
   <meta property="og:image" content="https://araujoricardo77.github.io/convite-raimundo-80-anos/ConvitecomLink.png">
   <meta property="og:url" content="https://araujoricardo77.github.io/convite-raimundo-80-anos/">
-  <title>Raimundo — 80 anos | Convite</title>
+  <title>Raimundo &#8212; 80 anos | Convite</title>
   <style>
     :root{color-scheme:light;font-family:system-ui,-apple-system,'Segoe UI',sans-serif;color:#183c32;background:#f4f1e9}
     *{box-sizing:border-box}body{margin:0;padding:24px 12px 38px}
@@ -28,38 +28,38 @@
 <body>
 <main>
   <header>
-    <h1>Raimundo — 80 anos</h1>
-    <p class="lead">Você é nosso convidado especial!</p>
+    <h1>Raimundo &#8212; 80 anos</h1>
+    <p class="lead">Voc&#234; &#233; nosso convidado especial!</p>
   </header>
   <img class="art" src="./ConvitecomLink.png" alt="Convite para os 80 anos do Raimundo, em 20 de dezembro de 2026" width="1000" height="1400">
   <section>
-    <p><strong>Domingo, 20 de dezembro de 2026</strong><br>13h às 18h<br>Salão Superior — Clube Vizinhança 108/109 Sul, Brasília/DF</p>
-    <p>Confirme sua presença até <strong>20 de novembro de 2026</strong>.</p>
-    <p style="font-weight:700;margin-bottom:8px">❤️ Sua confirmação é muito importante para a organização da festa! ❤️</p>
-    <p style="margin-top:0">Pedimos que confirme apenas se realmente puder comparecer, para que possamos preparar tudo com carinho e cuidado. Contamos com você!</p>
+    <p><strong>Domingo, 20 de dezembro de 2026</strong><br>13h &#224;s 18h<br>Sal&#227;o Superior &#8212; Clube Vizinhan&#231;a 108/109 Sul, Bras&#237;lia/DF</p>
+    <p>Confirme sua presen&#231;a at&#233; <strong>20 de novembro de 2026</strong>.</p>
+    <p style="font-weight:700;margin-bottom:8px">&#10084;&#65039; Sua confirma&#231;&#227;o &#233; muito importante para a organiza&#231;&#227;o da festa! &#10084;&#65039;</p>
+    <p style="margin-top:0">Pedimos que confirme apenas se realmente puder comparecer, para que possamos preparar tudo com carinho e cuidado. Contamos com voc&#234;!</p>
     <div id="action"></div>
-    <p class="hint">O botão abrirá o formulário de confirmação já utilizado pelo evento.</p>
+    <p class="hint">O bot&#227;o abrir&#225; o formul&#225;rio de confirma&#231;&#227;o j&#225; utilizado pelo evento.</p>
   </section>
 </main>
-<footer>Convite do aniversário de 80 anos do Raimundo</footer>
+<footer>Convite do anivers&#225;rio de 80 anos do Raimundo</footer>
 <script>
 (function(){
   'use strict';
   const BASE='https://script.google.com/macros/s/AKfycbzo06q6mO7y99LZqnuE5ez-ksPeOXxwuQatb8CVrcHBUHafe50OSqELo6gz0rjlodbu/exec';
   const area=document.getElementById('action');
-  // Apenas o fragmento é interpretado: ele não integra a solicitação HTTP ao GitHub.
+  // Apenas o fragmento \u00E9 interpretado: ele n\u00E3o integra a solicita\u00E7\u00E3o HTTP ao GitHub.
   const params=new URLSearchParams(window.location.hash.replace(/^#/,''));
   const token=params.get('t')||'';
   if(!/^[a-f0-9-]{73}$/i.test(token)){
     const msg=document.createElement('p');
     msg.className='alert';
-    msg.textContent='Para confirmar presença, abra o link individual enviado pelo organizador. Este endereço, sozinho, exibe apenas o convite.';
+    msg.textContent='Para confirmar presen\u00E7a, abra o link individual enviado pelo organizador. Este endere\u00E7o, sozinho, exibe apenas o convite.';
     area.appendChild(msg);
     return;
   }
   const a=document.createElement('a');
   a.className='btn';
-  a.textContent='CONFIRMAR PRESENÇA';
+  a.textContent='CONFIRMAR PRESEN\u00C7A';
   a.href=BASE+'?t='+encodeURIComponent(token);
   a.rel='noreferrer';
   area.appendChild(a);
